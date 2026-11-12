@@ -1,58 +1,58 @@
 GIT COMMANDS USED IN THIS ASSIGNMENT (RecipeBox project)
 
 git init
-Turns the current folder into a Git repository by creating the hidden .git directory.
+Starts version tracking in the current folder by creating a hidden .git directory.
 
 git branch -M main
-Renames the current branch to main.
+Forces the active branch to be called main.
 
 git status
-Shows which files are modified, staged or untracked.
+Lists changed, staged and untracked files in the working folder.
 
 git status --short
-Shows the same information in a compact one-line-per-file format.
+Gives a condensed status with one short line per file.
 
 git add <file>
-Puts the named file in the staging area so it is included in the next commit.
+Moves a file's current content into the staging area, ready for committing.
 
 git commit -m "message"
-Saves the staged changes as a commit with the given message.
+Records the staged snapshot permanently, labelled with my message.
 
 git branch feature
-Creates a new branch called feature at the current commit.
+Makes a new branch named feature starting from the current commit.
 
 git switch feature
-Moves the working folder onto the feature branch.
+Changes the checked-out branch to feature.
 
 git switch main
-Moves the working folder back to the main branch.
+Changes the checked-out branch back to main.
 
 git merge feature
-Brings the commits from the feature branch into the branch I am currently on.
+Combines the history of feature into whichever branch is checked out.
 
 git log --oneline --graph --decorate --all
-Prints a short history of all branches as a graph, with branch names beside the commits.
+Draws every branch's history as a compact graph, labelling commits with branch names.
 
 git log --oneline
-Prints a short one-line-per-commit history of the current branch.
+Lists the commits of the current branch, one per line.
 
 git check-ignore -v <path>
-Shows whether a path is ignored and which .gitignore rule matched it.
+Tells me whether a path is ignored and which ignore-file line is responsible.
 
 git revert --no-edit HEAD
-Adds a new commit that cancels out the latest commit, keeping the history intact.
+Creates a fresh commit that cancels the latest one, skipping the message editor.
 
 git remote add origin <URL>
-Registers the GitHub repository under the short name origin.
+Saves the GitHub address under the nickname origin.
 
 git remote -v
-Lists the remote names with their fetch and push URLs.
+Prints the saved remote nicknames together with their URLs.
 
 git push -u origin main
-Uploads the main branch to GitHub and sets it as the default upstream.
+Sends main to GitHub and links local main to origin/main.
 
 git push -u origin feature
-Uploads the feature branch to GitHub and sets its upstream.
+Sends feature to GitHub and links it to origin/feature.
 
 git push
-Uploads new commits on the current branch to its upstream.
+Sends new commits from the current branch to its linked remote branch.
