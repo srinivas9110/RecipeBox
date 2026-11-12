@@ -1,0 +1,58 @@
+GIT COMMANDS USED IN THIS ASSIGNMENT (RecipeBox project)
+
+git init
+Turns the current folder into a Git repository by creating the hidden .git directory.
+
+git branch -M main
+Renames the current branch to main.
+
+git status
+Shows which files are modified, staged or untracked.
+
+git status --short
+Shows the same information in a compact one-line-per-file format.
+
+git add <file>
+Puts the named file in the staging area so it is included in the next commit.
+
+git commit -m "message"
+Saves the staged changes as a commit with the given message.
+
+git branch feature
+Creates a new branch called feature at the current commit.
+
+git switch feature
+Moves the working folder onto the feature branch.
+
+git switch main
+Moves the working folder back to the main branch.
+
+git merge feature
+Brings the commits from the feature branch into the branch I am currently on.
+
+git log --oneline --graph --decorate --all
+Prints a short history of all branches as a graph, with branch names beside the commits.
+
+git log --oneline
+Prints a short one-line-per-commit history of the current branch.
+
+git check-ignore -v <path>
+Shows whether a path is ignored and which .gitignore rule matched it.
+
+git revert --no-edit HEAD
+Adds a new commit that cancels out the latest commit, keeping the history intact.
+
+git remote add origin <URL>
+Registers the GitHub repository under the short name origin.
+
+git remote -v
+Lists the remote names with their fetch and push URLs.
+
+git push -u origin main
+Uploads the main branch to GitHub and sets it as the default upstream.
+
+git push -u origin feature
+Uploads the feature branch to GitHub and sets its upstream.
+
+git push
+Uploads new commits on the current branch to its upstream.
